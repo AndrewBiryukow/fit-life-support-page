@@ -9,7 +9,7 @@
  * 5. Deploy -> New deployment -> Select type 'Web app'.
  * 6. Set 'Execute as' to 'Me' and 'Who has access' to 'Anyone'.
  * 7. Deploy, authorize, and copy the Web App URL.
- * 8. Paste the Web App URL into src/components/Contact.tsx (line 17).
+ * 8. Paste the Web App URL into index.html (around line 234) inside the action="..." attribute of the <form>.
  */
 
 const SHEET_ID = 'YOUR_SHEET_ID_HERE'; // Replace with your Sheet ID
@@ -26,18 +26,18 @@ function doPost(e) {
       sheet.getRange(1, 1, 1, 5).setFontWeight('bold');
     }
 
-    const data = JSON.parse(e.postData.contents);
-    const { name, email, phone, message } = data;
+    // Read from e.parameter because the static HTML form sends application/x-www-form-urlencoded
+    const { name, email, phone, message } = e.parameter;
     const timestamp = new Date().toISOString(); // Save as UTC string
     
     sheet.appendRow([timestamp, name, email, phone, message]);
     
-    return ContentService.createTextOutput(JSON.stringify({ status: "success", message: "Data saved successfully" }))
-      .setMimeType(ContentService.MimeType.JSON);
+    const htmlSuccess = "<html><body style='font-family: sans-serif; text-align: center; padding-top: 50px;'><h2>Thank you!</h2><p>Your message has been sent successfully.</p><script>setTimeout(()=>window.close(), 4000)</script></body></html>";
+    return HtmlService.createHtmlOutput(htmlSuccess);
       
   } catch (error) {
-    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: error.toString() }))
-      .setMimeType(ContentService.MimeType.JSON);
+    const htmlError = "<html><body style='font-family: sans-serif; text-align: center; padding-top: 50px;'><h2>Error</h2><p>" + error.toString() + "</p></body></html>";
+    return HtmlService.createHtmlOutput(htmlError);
   }
 }
 

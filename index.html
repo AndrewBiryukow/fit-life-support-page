@@ -1,18 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FitLife - Smart Made Easy</title>
-    <meta name="description" content="FitLife provides smart and integrated solutions to clients who need connected sports products." />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitLife - Smart Made Easy</title>
+  <meta name="description" content="FitLife provides smart and integrated solutions to clients who need connected sports products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="logo" style="margin-top: 5px;">
+        <svg width="180" height="37" viewBox="0 0 180 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1387_541)">
+              <path d="M63.2715 3.59109L62.2627 8.64187H45.8799L45.8018 9.04714L44.1465 17.6575L44.0322 18.2512H58.5723L57.5635 23.302H43.1055L43.0273 23.7073L40.8232 35.1702H34.5469L40.6201 3.59109H63.2715Z" fill="url(#paint0_linear_1387_541)" stroke="#2A728C"/>
+              <path d="M74.6289 12.0889L70.0312 36.1279H64.1123L68.709 12.0889H74.6289ZM73.4873 0.5C75.7217 0.5 77.1053 1.90519 77.1055 3.62988C77.1055 4.83389 76.681 5.81694 75.9717 6.49902C75.2608 7.18244 74.2269 7.59766 72.9502 7.59766C70.7448 7.59744 69.3779 6.12622 69.3779 4.32812C69.378 2.19967 70.9735 0.500187 73.4873 0.5Z" fill="url(#paint1_linear_1387_541)" stroke="#2A728C"/>
+              <path d="M89.9795 6.55032L88.9297 12.0532L88.8164 12.647H94.8125L93.9307 17.232H87.9326L87.8555 17.6382L85.9307 27.6909C85.8311 28.1184 85.832 28.4919 85.832 28.8091C85.8321 29.6599 86.0567 30.4132 86.6025 30.9507C87.1473 31.487 87.9323 31.729 88.8838 31.729C89.714 31.729 90.5567 31.4993 91.3457 31.1109L92.1729 35.2642C90.5912 36.1751 88.6696 36.4995 86.7354 36.4995C84.5926 36.4995 82.8424 35.8769 81.6338 34.7798C80.4311 33.6881 79.7168 32.0841 79.7168 30.0191C79.7168 29.3611 79.8004 28.6473 79.9316 27.9195L81.8564 17.8257L81.9688 17.232H78.2559L79.1377 12.647H82.8525L82.9297 12.2407L84.0166 6.55032H89.9795Z" fill="url(#paint2_linear_1387_541)" stroke="#2A728C"/>
+              <path d="M109.804 4.54906L104.817 30.3899L104.702 30.9846H120.408L119.396 36.1282H97.4551L103.528 4.54906H109.804Z" fill="white" stroke="#2A728C"/>
+              <path d="M134.553 12.0889L129.955 36.1279H124.036L128.633 12.0889H134.553ZM133.411 0.5C135.646 0.5 137.029 1.90518 137.029 3.62988C137.029 4.83389 136.605 5.81694 135.896 6.49902C135.185 7.18235 134.152 7.59755 132.875 7.59766C130.669 7.59766 129.302 6.12635 129.302 4.32812C129.302 2.19967 130.897 0.500187 133.411 0.5Z" fill="white" stroke="#2A728C"/>
+              <path d="M153.148 2.22202C155.024 2.22205 156.765 2.62767 158.032 3.30893L155.785 7.59995C155.023 7.14979 154.144 6.94668 153.193 6.94662C152.023 6.94662 151.055 7.26694 150.317 7.99936C149.595 8.71728 149.152 9.77331 148.897 11.1234L148.719 12.0531L148.604 12.6468H154.736L153.854 17.2318H147.901L147.824 17.638L144.277 36.1273H138.313L141.824 17.8265L141.938 17.2318H138.18L139.062 12.6468H142.823L142.899 12.2386L143.167 10.8011C143.688 8.15741 144.788 6.01909 146.434 4.5433C148.075 3.07207 150.3 2.22202 153.148 2.22202Z" fill="white" stroke="#2A728C"/>
+              <path d="M168.544 11.7164C171.954 11.7164 174.684 12.765 176.56 14.5777C178.433 16.3888 179.501 19.0089 179.501 22.2466C179.501 23.4013 179.365 24.5266 179.182 25.563H160.626L160.661 26.0962C160.779 27.8888 161.377 29.314 162.541 30.2808C163.694 31.2388 165.326 31.6822 167.381 31.6822C169.734 31.6821 171.984 30.947 173.697 29.6099L176.079 33.5337C173.46 35.5795 170.099 36.4996 166.664 36.4996C163.002 36.4995 160.055 35.4239 158.029 33.5708C156.008 31.7218 154.857 29.058 154.857 25.7837C154.857 17.665 160.469 11.7164 168.544 11.7164ZM168.23 16.1617C164.758 16.1618 162.168 18.3841 161.174 21.6832L160.979 22.3277H174.102V21.8277C174.102 20.063 173.524 18.6296 172.466 17.6402C171.412 16.6552 169.936 16.1617 168.23 16.1617Z" fill="white" stroke="#2A728C"/>
+              <path d="M33.3133 7.15566H6.30116C5.70072 7.15566 5.68953 6.24423 6.27878 5.12337C6.8643 4.00251 7.82649 3.09109 8.42692 3.09109H35.439C36.0395 3.09109 36.0507 4.00251 35.4614 5.12337C34.8759 6.24423 33.9137 7.15566 33.3133 7.15566Z" fill="url(#paint3_linear_1387_541)" stroke="#2A728C" stroke-width="0.1" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M30.4012 21.4127H3.38905C2.78861 21.4127 2.77742 20.5013 3.36667 19.3804C3.95219 18.2595 4.91438 17.3481 5.51481 17.3481H32.5269C33.1274 17.3481 33.1386 18.2595 32.5493 19.3804C31.9638 20.5013 31.0016 21.4127 30.4012 21.4127Z" fill="url(#paint4_linear_1387_541)" stroke="#2A728C" stroke-width="0.1" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M27.4891 35.6697H0.476939C-0.123496 35.6697 -0.134684 34.7583 0.454563 33.6374C1.04008 32.5166 2.00227 31.6051 2.6027 31.6051H29.6148C30.2153 31.6051 30.2264 32.5166 29.6372 33.6374C29.0517 34.7583 28.0895 35.6697 27.4891 35.6697Z" fill="url(#paint5_linear_1387_541)" stroke="#2A728C" stroke-width="0.1" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+              <linearGradient id="paint0_linear_1387_541" x1="48.9113" y1="3.09109" x2="48.9113" y2="35.6697" gradientUnits="userSpaceOnUse"><stop stop-color="#71B9D8"/><stop offset="1" stop-color="#0689C0"/></linearGradient>
+              <linearGradient id="paint1_linear_1387_541" x1="70.5564" y1="0" x2="70.5564" y2="36.6277" gradientUnits="userSpaceOnUse"><stop stop-color="#71B9D8"/><stop offset="1" stop-color="#0689C0"/></linearGradient>
+              <linearGradient id="paint2_linear_1387_541" x1="86.5338" y1="6.05032" x2="86.5338" y2="37" gradientUnits="userSpaceOnUse"><stop stop-color="#71B9D8"/><stop offset="1" stop-color="#0689C0"/></linearGradient>
+              <linearGradient id="paint3_linear_1387_541" x1="20.8701" y1="3.09109" x2="20.8701" y2="7.15566" gradientUnits="userSpaceOnUse"><stop stop-color="#71B9D8"/><stop offset="1" stop-color="#0689C0"/></linearGradient>
+              <linearGradient id="paint4_linear_1387_541" x1="17.958" y1="17.3481" x2="17.958" y2="21.4127" gradientUnits="userSpaceOnUse"><stop stop-color="#71B9D8"/><stop offset="1" stop-color="#0689C0"/></linearGradient>
+              <linearGradient id="paint5_linear_1387_541" x1="15.0459" y1="31.6051" x2="15.0459" y2="35.6697" gradientUnits="userSpaceOnUse"><stop stop-color="#71B9D8"/><stop offset="1" stop-color="#0689C0"/></linearGradient>
+              <clipPath id="clip0_1387_541"><rect width="180" height="37" fill="white"/></clipPath>
+          </defs>
+        </svg>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#app-services">App services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="social-icon youtube">
+          <svg width="20" height="20" viewBox="0 -7 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-200.000000, -368.000000)" fill="#CE1312">
+                      <path d="M219.044,391.269916 L219.0425,377.687742 L232.0115,384.502244 L219.044,391.269916 Z M247.52,375.334163 C247.52,375.334163 247.0505,372.003199 245.612,370.536366 C243.7865,368.610299 241.7405,368.601235 240.803,368.489448 C234.086,368 224.0105,368 224.0105,368 L223.9895,368 C223.9895,368 213.914,368 207.197,368.489448 C206.258,368.601235 204.2135,368.610299 202.3865,370.536366 C200.948,372.003199 200.48,375.334163 200.48,375.334163 C200.48,375.334163 200,379.246723 200,383.157773 L200,386.82561 C200,390.73817 200.48,394.64922 200.48,394.64922 C200.48,394.64922 200.948,397.980184 202.3865,399.447016 C204.2135,401.373084 206.612,401.312658 207.68,401.513574 C211.52,401.885191 224,402 224,402 C224,402 234.086,401.984894 240.803,401.495446 C241.7405,401.382148 243.7865,401.373084 245.612,399.447016 C247.0505,397.980184 247.52,394.64922 247.52,394.64922 C247.52,394.64922 248,390.73817 248,386.82561 L248,383.157773 C248,379.246723 247.52,375.334163 247.52,375.334163 L247.52,375.334163 Z"></path>
+                  </g>
+              </g>
+          </svg>
+        </a>
+        <a href="#" class="social-icon discord">
+          <svg width="20" height="20" viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+              <g><path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"></path></g>
+          </svg>
+        </a>
+        <div class="language-selector">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          <span class="lang-text">Eng</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="carousel">
+      <div class="carousel-slide" style="background-image: url('images/carousel/carousel_bg.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/carousel/05ca43bca8db235f7b8bac6064895f3aa70a7c6f.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/carousel/89cc41a6c597cfdd8571e65f81b8eabee9bcdbca.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/carousel/af92340a5baabbf36a5c6dc82062e241d94e0e3b.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/carousel/e5d0ff9c084ea78fc5608ea4047733997886e097.jpg')"></div>
+      
+      <div class="carousel-overlay"></div>
+      
+      <div class="container carousel-container">
+        <div class="carousel-content">
+          <h1 class="carousel-title">Smart<br />Made Easy</h1>
+          <p class="carousel-description">
+            <span class="text-primary font-bold italic">Fit</span><span class="font-bold">Life</span> provides smart and integrated solutions<br />
+            to clients who need connected sports products.
+          </p>
+          <button class="btn-primary">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2 class="section-title">Services provide for you</h2>
+        <p class="services-subtitle">
+          <span class="text-primary font-bold italic">Fit</span><span class="font-bold">Life</span> services include smart hardware development, APP Services,<br />
+          and software custom development services
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.48 12H2"/></svg>
+            </div>
+            <h3 class="service-card-title">Hardware Development</h3>
+            <p class="service-card-desc">Embedded development, communication protocol development, SDK development, Licence licensing.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-smartphone"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-3.96 3.15"/><path d="M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/></svg>
+            </div>
+            <h3 class="service-card-title">Software Development</h3>
+            <p class="service-card-desc">Fitness App Development,OEM App,APP SDK,Cloud Development, Data Analytics,SaaS Services.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="service-card-title">APP Services</h3>
+            <p class="service-card-desc">FitLife hardware is perfectly compatible with FitShow, Kinomap, Onelap, Zwift.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-dev">
+      <div class="container">
+        <div class="dev-card">
+          <div class="dev-image">
+            <img src="images/software_dev.png" alt="Software Development" class="rounded-image" />
+          </div>
+          <div class="dev-content">
+            <h2 class="section-title text-left">Software Development</h2>
+            <p class="dev-subtitle">
+              We provide full-cycle software engineering services for sports and fitness equipment, helping brands create connected digital ecosystems.
+            </p>
+            <p class="dev-text">
+              Our team specializes in Fitness App Development (custom mobile applications for iOS & Android). Contact us and get scalable and reliable software customized to your business goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="app-services" class="app-services">
+      <div class="container">
+        <h2 class="section-title">APP Services</h2>
+        
+        <div class="app-card">
+          <div class="app-card-content">
+            <h3 class="app-card-title"><span class="text-primary italic font-bold">Fit</span>Life App</h3>
+            <p class="app-card-desc">
+              Devices using the <span class="text-primary italic font-bold">Fit</span><span class="font-bold">Life</span> Bluetooth module can use the <br/>
+              <span class="text-primary italic font-bold">Fit</span><span class="font-bold">Life</span> APP for free.
+            </p>
+            
+            <div class="app-features">
+              <div class="feature">
+                <h4 class="feature-title">Basic Version</h4>
+                <p>
+                  <span class="text-primary italic font-bold">Fit</span><span class="font-bold">Life</span> generic interface and content display, does not support backend management system.
+                </p>
+              </div>
+              <div class="feature">
+                <h4 class="feature-title">Brand Customization</h4>
+                <p>
+                  Exclusive brand interface and information display, exclusive backend user management system.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="app-card-image">
+             <img src="images/app_services_phones.png" alt="Fitness App on Phones" class="phones-img" />
+          </div>
+        </div>
+
+        <div class="third-party-card">
+          <div class="third-party-content">
+            <h3 class="third-party-title">Third Party App</h3>
+            <p>
+              The FitShow Bluetooth module is perfectly compatible with Kinomap, Onelap, Zwift and APPs supporting FTMS protocol.
+            </p>
+          </div>
+          <div class="third-party-apps">
+            <div class="app-icon kinomap">
+              <img src="images/kinomap_icon.png" alt="Kinomap" class="third-party-img" />
+            </div>
+            <div class="app-icon onelap">
+              <img src="images/onelap_icon.png" alt="Onelap" class="third-party-img" />
+            </div>
+            <div class="app-icon zwift">
+              <img src="images/zwift_icon.png" alt="Zwift" class="third-party-img" />
+            </div>
+            <div class="app-icon ftms">
+              <img src="images/ftms_icon.png" alt="FTMS App" class="third-party-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats">
+      <div class="container">
+        <h2 class="section-title">Services by the numbers</h2>
+        <div class="stats-grid">
+          <div class="stat-item" style="animation-delay: 0s;">
+            <div class="stat-number">5,000,000 +</div>
+            <div class="stat-label">Smart-Enabled Devices</div>
+          </div>
+          <div class="stat-item" style="animation-delay: 0.1s;">
+            <div class="stat-number">280 +</div>
+            <div class="stat-label">OEM Partners</div>
+          </div>
+          <div class="stat-item" style="animation-delay: 0.2s;">
+            <div class="stat-number">220 +</div>
+            <div class="stat-label">Brand Partners</div>
+          </div>
+          <div class="stat-item" style="animation-delay: 0.3s;">
+            <div class="stat-number">120 +</div>
+            <div class="stat-label">Regional Distribution</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <div class="contact-card form-card">
+            <h3 class="contact-title">Get In Touch</h3>
+            <!-- form submitting to Google Apps Script. Uses target="_blank" as there is no JS to prevent redirect -->
+            <form action="https://script.google.com/macros/s/AKfycbxWQGf6VZs0FqdWF4PlAvDCnUWTp1FW7dSMaQPK5Xx0G3Zk5NiDH36K7vvBRj7ooSPo/exec" method="POST" class="contact-form" target="_blank">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="tel" name="phone" placeholder="Your Phone" />
+              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+              <button type="submit" class="btn-primary form-submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-card info-card">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
+            </div>
+            <h4 class="info-title">Contact Phone Number</h4>
+            <p>04432083500</p>
+            <p>0976509319</p>
+          </div>
+
+          <div class="contact-card info-card">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h4 class="info-title">Our Location</h4>
+            <p>Room 1302, B04, Software Park, Xiamen City, Fujian Province, China</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background-color: #e6e6e6; padding: 2rem 0; text-align: center;">
+    <div class="container">
+      <p style="color: #555; font-size: 0.95rem;">
+        Copyright &copy; 2024 <span class="text-primary italic font-bold">Fit</span><span class="font-bold">Life</span>. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
 </html>
