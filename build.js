@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -273,4 +276,8 @@
     </div>
   </footer>
 </body>
-</html>
+</html>`;
+
+const outPath = path.join(__dirname, 'index.html');
+fs.writeFileSync(outPath, htmlContent, 'utf-8');
+console.log('Successfully generated index.html');
