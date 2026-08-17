@@ -232,10 +232,10 @@
             <h3 class="contact-title">Get In Touch</h3>
             <!-- form submitting to Google Apps Script. Uses target="_blank" as there is no JS to prevent redirect -->
             <form action="https://script.google.com/macros/s/AKfycbxWQGf6VZs0FqdWF4PlAvDCnUWTp1FW7dSMaQPK5Xx0G3Zk5NiDH36K7vvBRj7ooSPo/exec" method="POST" class="contact-form" target="_blank">
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <input type="tel" name="phone" placeholder="Your Phone" />
-              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+              <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
+              <input type="email" id="contact-email" name="email" placeholder="Your Email" required />
+              <input type="tel" id="contact-phone" name="phone" placeholder="Your Phone" />
+              <textarea id="contact-message" name="message" placeholder="Your Message" rows="4" required></textarea>
               <button type="submit" class="btn-primary form-submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                 Send Message
