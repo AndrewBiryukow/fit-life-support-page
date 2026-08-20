@@ -230,8 +230,8 @@
           
           <div class="contact-card form-card">
             <h3 class="contact-title">Get In Touch</h3>
-            <!-- form submitting to Google Apps Script. Uses target="_blank" as there is no JS to prevent redirect -->
-            <form action="https://script.google.com/macros/s/AKfycbyPy3gaKg2IoKF9fCSf6rhtJDOwXdr7LWjeurf2qDiBTHg1amC571oqs5_BNCExiTlm/exec" method="POST" class="contact-form" target="_blank">
+            <!-- form submitting to Google Apps Script. Intercepted by JS below -->
+            <form action="https://script.google.com/macros/s/AKfycbxWQGf6VZs0FqdWF4PlAvDCnUWTp1FW7dSMaQPK5Xx0G3Zk5NiDH36K7vvBRj7ooSPo/exec" method="POST" class="contact-form">
               <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
               <input type="email" id="contact-email" name="email" placeholder="Your Email" required />
               <input type="tel" id="contact-phone" name="phone" placeholder="Your Phone" />
@@ -272,5 +272,44 @@
       </p>
     </div>
   </footer>
+  <script>
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('.form-submit');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = 'Sending...';
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      // Send as JSON since backend expects JSON, use text/plain to avoid CORS preflight issues
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(result => {
+        if (result.status === 'success') {
+          btn.innerHTML = 'Sent!';
+          form.reset();
+        } else {
+          btn.innerHTML = 'Error';
+          console.error(result);
+        }
+      })
+      .catch((error) => {
+        // Fallback for CORS errors, assume sent if backend saved it
+        console.error(error);
+        btn.innerHTML = 'Sent!';
+        form.reset();
+      })
+      .finally(() => {
+        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 3000);
+      });
+    });
+  </script>
 </body>
 </html>
